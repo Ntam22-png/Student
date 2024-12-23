@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="payment-container mt-5">
+        <h2 class="text-center">Payment</h2>
+        <form id="paymentForm">
+            <div class="form-group">
+                <label for="paymentMethod">Payment Method:</label>
+                <select class="form-control" id="paymentMethod" required onchange="toggleInputFields()">
+                    <option value="" disabled selected>Select a payment method</option>
+                    <option value="mobileMoney">Mobile Money</option>
+                    <option value="creditCard">Credit Card</option>
+                    <option value="bankTransfer">Bank Transfer</option>
+                </select>
+            </div>
+            <div class="form-group" id="mobileMoneyOptions" style="display: none;">
+                <label for="mobileProvider">Select Mobile Provider:</label>
+                <select class="form-control" id="mobileProvider" required>
+                    <option value="" disabled selected>Select a provider</option>
+                    <option value="mtn">MTN</option>
+                    <option value="orange">Orange</option>
+                </select>
+            </div>
+            <div class="form-group" id="amountGroup" style="display: none;">
+                <label for="amount">Amount (in XOF):</label>
+                <input type="number" class="form-control" id="amount" placeholder="Enter amount" required>
+            </div>
+            <div class="form-group" id="accountNumberGroup" style="display: none;">
+                <label for="accountNumber">Account Number:</label>
+                <input type="text" class="form-control" id="accountNumber" placeholder="Enter account number" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="payButton" style="display: none;">Pay Now</button>
+        </form>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

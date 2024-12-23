@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecturer Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Lecturer Dashboard</h2>
+
+        <div class="header-section mt-4 mb-4">
+            <h3>Manage AWS Integration</h3>
+            <p>Configure your AWS credentials and create IAM accounts for students easily.</p>
+        </div>
+
+        <div class="aws-credentials-section mb-5">
+            <h4>Configure AWS Credentials</h4>
+            <form id="awsCredentialsForm">
+                <div class="form-group">
+                    <label for="awsAccessKey">AWS Access Key:</label>
+                    <input type="text" class="form-control" id="awsAccessKey" placeholder="Enter AWS Access Key" required>
+                </div>
+                <div class="form-group">
+                    <label for="awsSecretKey">AWS Secret Key:</label>
+                    <input type="text" class="form-control" id="awsSecretKey" placeholder="Enter AWS Secret Key" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Credentials</button>
+            </form>
+        </div>
+
+        <div class="create-iam-section mb-5">
+            <h4>Create IAM Account for Students</h4>
+            <form id="createIAMForm">
+                <div class="form-group">
+                    <label for="studentEmail">Student Email:</label>
+                    <input type="email" class="form-control" id="studentEmail" placeholder="Enter student's email" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentName">Student Name:</label>
+                    <input type="text" class="form-control" id="studentName" placeholder="Enter student's name" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Create IAM Account</button>
+            </form>
+        </div>
+
+        <div class="paid-students-section">
+            <h4>Paid Students</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Amount Paid</th>
+                    </tr>
+                </thead>
+                <tbody id="paidStudentsTableBody">
+                    <!-- Paid students will be dynamically populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.12.min.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

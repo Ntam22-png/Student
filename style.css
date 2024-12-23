@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f0802; /* Brown background */
+}
+
+.form-container, .payment-container, .dashboard-container {
+    max-width: 100px; /* Reduced width for forms */
+    margin: auto;
+    padding: 20px;
+    background-color: rgb(119, 78, 78);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 30px;
+    color: #333;
+}
+
+.form-control {
+    border-radius: 20px;
+    max-width: 50%; /* Ensure it takes full available width */
+}
+
+.btn {
+    border-radius: 20px;
+}
+
+.table {
+    margin-top: 20px;
+}
